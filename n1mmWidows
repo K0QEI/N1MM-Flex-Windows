@@ -1,0 +1,48 @@
+copy and past the bellow into the N1MM Logger Macros, chaning speed is done via radio if you are using the maestro or change on the Smart SDR screen.
+
+
+
+## N1MM Logger+ CW Default Function Key File
+#
+# This file can be used in most CW contests that have a simple exchange
+# The {EXCH} macro uses the contents of the Sent Exchange box in the contest setup
+# The {SENTRSTCUT} defaults to 5NN or allows manual entry of signal report
+# F5 uses "!" macro for his callsign
+# Do not use the {CALL} macro in place of the ! macro
+# S&P F1 calls QRL? before placing the program in RUN mode for calling CQ
+#
+# To respond to caller, send F5 then F2, or ; (default exchange key) or 
+#   Insert, or Enter in ESM
+#
+#
+###################
+#   RUN Messages 
+###################
+F1 Cq, {CAT1ASC KY cq test  {MYCALL} {MYCALL};}
+F2 Exch, {CAT1ASC KY {SENTRSTCUT} {EXCH};}
+F3 Tu,{CAT1ASC KY tu ;}
+F4 {MYCALL},{CAT1ASC KY {MYCALL};}
+F5 His Call,{CAT1ASC KY !;}
+F6 Repeat, {CAT1ASC KY {SENTRSTCUT} {EXCH} {EXCH};}
+F7 Empty, 
+F8 Agn?,{CAT1ASC KY agn?;}
+F9 Nr?,{CAT1ASC KY nr?;}
+F10 Call?,{CAT1ASC KY cl?;}
+F11 Empty, 
+F12 Wipe,{WIPE}
+#
+###################
+#   S&P Messages 
+###################
+F1 Qrl?,{CAT1ASC KY qrl? de {MYCALL};}
+F2 Exch,{CAT1ASC KY {SENTRSTCUT} {EXCH};}
+F3 Tu,{CAT1ASC KY tu;}
+F4 {MYCALL},{CAT1ASC KY {MYCALL};}
+F5 His Call,{CAT1ASC KY !;}
+F6 Repeat,{CAT1ASC KY {SENTRSTCUT} {EXCH} {EXCH};}
+F7 Empty,  
+F8 Agn?,{CAT1ASC KY agn?;}
+F9 Nr?,{CAT1ASC KY nr?;}
+F10 Call?,{CAT1ASC KY cl?;}
+F11 Empty,  
+F12 Wipe,{WIPE}
